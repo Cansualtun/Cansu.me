@@ -37,10 +37,6 @@ const ContactForm = () => {
             });
 
             setFormData({ name: '', email: '', subject: '', message: '' });
-        } catch (err) {
-            toast.error(t('toast.error.title'), {
-                description: t('toast.error.description'),
-            });
         } finally {
             setLoading(false);
             toast.dismiss(loadingToast);
