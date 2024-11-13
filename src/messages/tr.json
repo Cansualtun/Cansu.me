@@ -1,0 +1,75 @@
+{
+  "about": {
+    "greeting": "Merhaba, Ben Cansu Altun",
+    "title": "Frontend Developer",
+    "bio": {
+      "first": "Frontend geliştirme konusunda tutkulu bir yazılımcıyım. Modern web teknolojilerini kullanarak kullanıcı dostu ve performanslı uygulamalar geliştiriyorum. React, Next.js ve TypeScript ekosisteminde uzmanlaşıyorum.",
+      "second": "Yazılım geliştirme yolculuğuma 2021 yılında başladım. O zamandan beri sürekli kendimi geliştiriyor ve yeni teknolojileri öğreniyorum. Kullanıcı deneyimini ön planda tutarak, temiz ve sürdürülebilir kod yazmaya özen gösteriyorum.",
+      "third": "Boş zamanlarımda açık kaynak projelere katkıda bulunuyor, teknoloji blogları okuyor ve yeni web teknolojilerini deneyimliyorum. Ayrıca Modern danslarla ile aktif olarak ilgileniyorum."
+    },
+    "skills": "Teknik Yetenekler"
+  },
+  "experience": {
+    "title": "İş Deneyimlerim",
+    "companies": {
+      "hexaworks": {
+        "title": "Yazılım Geliştirici",
+        "subtitle": "Tam Zamanlı",
+        "description": "Hexaworks'te, performans ve kullanıcı deneyimi odaklı ölçeklenebilir web çözümleri geliştirmek üzere, micro frontend mimarisi ve modern frameworkler kullanarak yenilikçi projeler yürütüyorum. Geliştirme süreçlerinde Typescript, React ve Next.js gibi ileri düzey teknolojiler ile kullanıcı dostu ve yüksek performanslı dijital deneyimler sunmayı hedefliyoruz."
+      },
+      "primetech": {
+        "title": "Frontend Geliştirici",
+        "subtitle": "Tam Zamanlı",
+        "description": "Müşteri odaklı, modüler web siteleri ve mobil uygulamalar üzerinde çalıştım."
+      },
+      "kolayyolculuk": {
+        "title": "Frontend Geliştirici Stajyer",
+        "subtitle": "Stajyer",
+        "description": "Kullanıcı deneyimini ön planda tutarak, responsive tasarım ve tarayıcı uyumluluğu alanlarında pratik yaptım. React ve Bootstrap kullanarak dinamik arayüzlerin geliştirilmesine destek verdim ve projelerde yazılım geliştirme süreçlerini daha yakından gözlemleme fırsatı buldum."
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Sorularınız veya projeleriniz için benimle iletişime geçebilirsiniz.",
+    "form": {
+      "name": {
+        "label": "İsminiz",
+        "placeholder": "Adınız Soyadınız"
+      },
+      "email": {
+        "label": "Email Adresiniz",
+        "placeholder": "ornek@email.com"
+      },
+      "subject": {
+        "label": "Konu",
+        "placeholder": "Mesajınızın konusu"
+      },
+      "message": {
+        "label": "Mesajınız",
+        "placeholder": "Mesajınızı buraya yazın"
+      },
+      "submit": {
+        "default": "Mesaj Gönder",
+        "loading": "Gönderiliyor..."
+      }
+    },
+    "toast": {
+      "loading": "Mesajınız gönderiliyor...",
+      "success": {
+        "title": "Mesajınız başarıyla gönderildi!",
+        "description": "En kısa sürede size dönüş yapacağım."
+      },
+      "error": {
+        "title": "Bir hata oluştu!",
+        "description": "Lütfen daha sonra tekrar deneyin."
+      }
+    }
+  },
+  "sidebar": {
+    "status": {
+      "title": "İş Aramaya Açık",
+      "subtitle": "Yeni fırsatlar için hazırım"
+    }
+  }
+}

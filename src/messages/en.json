@@ -1,0 +1,75 @@
+{
+  "about": {
+    "greeting": "Hi, I'm Cansu Altun",
+    "title": "Frontend Developer",
+    "bio": {
+      "first": "I'm a passionate frontend developer creating user-friendly and performant web applications using modern technologies. I specialize in React, Next.js, and TypeScript ecosystem.",
+      "second": "I started my software development journey in 2021. Since then, I've been continuously improving myself and learning new technologies. I focus on user experience while writing clean and maintainable code.",
+      "third": "In my free time, I contribute to open-source projects, read technology blogs, and experiment with new web technologies. I'm also actively involved in Modern dance."
+    },
+    "skills": "Technical Skills"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "companies": {
+      "hexaworks": {
+        "title": "Software Developer",
+        "subtitle": "Full Time",
+        "description": "At Hexaworks, I lead innovative projects focused on scalable web solutions with an emphasis on performance and user experience, utilizing a micro frontend architecture and modern frameworks. Throughout the development process, I aim to deliver user-friendly and high-performance digital experiences using advanced technologies such as TypeScript, React, and Next.js"
+      },
+      "primetech": {
+        "title": "Frontend Developer",
+        "subtitle": "Full Time",
+        "description": "Worked on customer-focused, modular websites and mobile applications."
+      },
+      "kolayyolculuk": {
+        "title": "Frontend Developer Intern",
+        "subtitle": "Intern",
+        "description": "Prioritizing user experience, I practiced responsive design and browser compatibility. I contributed to the development of dynamic interfaces using React and Bootstrap and had the opportunity to closely observe the software development processes in projects."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Feel free to reach out with any questions or projects.",
+    "form": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Your Email",
+        "placeholder": "example@email.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Message subject"
+      },
+      "message": {
+        "label": "Your Message",
+        "placeholder": "Type your message here"
+      },
+      "submit": {
+        "default": "Send Message",
+        "loading": "Sending..."
+      }
+    },
+    "toast": {
+      "loading": "Sending your message...",
+      "success": {
+        "title": "Message sent successfully!",
+        "description": "I will get back to you as soon as possible."
+      },
+      "error": {
+        "title": "An error occurred!",
+        "description": "Please try again later."
+      }
+    }
+  },
+  "sidebar": {
+    "status": {
+      "title": "Available for work",
+      "subtitle": "Looking for new opportunities"
+    }
+  }
+}
