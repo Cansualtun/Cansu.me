@@ -67,6 +67,9 @@
     }
   },
   "sidebar": {
+    "about": "Hakkımda",
+    "contact": "İletişim",
+    "experience": "Deneyimlerim",
     "status": {
       "title": "İş Aramaya Açık",
       "subtitle": "Yeni fırsatlar için hazırım"

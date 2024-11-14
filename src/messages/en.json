@@ -67,6 +67,9 @@
     }
   },
   "sidebar": {
+    "about": "About",
+    "contact": "Contact",
+    "experience": "Experience",
     "status": {
       "title": "Available for work",
       "subtitle": "Looking for new opportunities"

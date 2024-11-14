@@ -5,6 +5,7 @@ import { usePathname, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Home, User, Briefcase, Mail, Languages } from 'lucide-react';
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
+import { useTranslations } from 'next-intl';
 
 interface MenuItem {
     title: string;
@@ -13,16 +14,16 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-    { title: 'About', path: '/', icon: <User size={20} /> },
-    { title: 'Experience', path: '/experience', icon: <Briefcase size={20} /> },
-    { title: 'Contact', path: '/contact', icon: <Mail size={20} /> },
+    { title: 'sidebar.about', path: '/', icon: <User size={20} /> },
+    { title: 'sidebar.experience', path: '/experience', icon: <Briefcase size={20} /> },
+    { title: 'sidebar.contact', path: '/contact', icon: <Mail size={20} /> },
 ];
 
 const Sidebar: React.FC = () => {
     const pathname = usePathname();
     const params = useParams();
     const currentLocale = params.locale as string;
-
+    const t = useTranslations();
     const handleLanguageChange = (locale: string) => {
         const newPath = pathname.replace(`/${currentLocale}`, `/${locale}`);
         window.location.href = newPath;
@@ -65,7 +66,7 @@ const Sidebar: React.FC = () => {
                                     />
                                 )}
                                 <span className="z-10">{item.icon}</span>
-                                <span className="font-medium z-10 max-[760px]:hidden">{item.title}</span>
+                                <span className="font-medium z-10 max-[760px]:hidden">{t(item.title)}</span>
                             </motion.div>
                         </Link>
                     );
