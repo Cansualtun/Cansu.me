@@ -9,25 +9,7 @@ export const metadata: Metadata = {
   title: 'Cansu Altun | Frontend Developer',
   description: 'Frontend Developer specialized in React, Next.js, and TypeScript',
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png' }
-    ],
-  },
-  openGraph: {
-    type: 'website',
-    title: 'Cansu Altun | Frontend Developer',
-    description: 'Frontend Developer specialized in React, Next.js, and TypeScript',
-    url: 'https://your-website.com',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Cansu Altun | Frontend Developer',
-    description: 'Frontend Developer specialized in React, Next.js, and TypeScript',
-    images: ['/og-image.png'],
+    icon: '/favicon.ico'
   },
 };
 
