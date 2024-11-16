@@ -49,9 +49,6 @@ const ContactForm = () => {
 
             setFormData({ name: '', email: '', subject: '', message: '' });
             setCaptchaToken(null);
-            if (window.grecaptcha) {
-                window.grecaptcha.reset();
-            }
 
         } finally {
             setLoading(false);
