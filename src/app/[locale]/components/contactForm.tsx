@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Send, Loader2 } from 'lucide-react';
@@ -17,11 +17,13 @@ const ContactForm = () => {
     });
     const [loading, setLoading] = useState(false);
     const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+    const [isVerified, setIsVerified] = useState(false);
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!captchaToken) {
+        if (!isVerified) {
             toast.error('Lütfen robot olmadığınızı doğrulayın');
             return;
         }
@@ -56,6 +58,26 @@ const ContactForm = () => {
         }
     };
 
+    async function handleCaptchaSubmission(token: string | null) {
+        try {
+            if (token) {
+                await fetch("/api/verify", {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ token }),
+                });
+                setIsVerified(true);
+            }
+        } catch {
+            setIsVerified(false);
+        }
+    }
+    const handleExpired = () => {
+        setIsVerified(false)
+    }
     return (
         <div className="min-h-screen bg-gradient-to-br from-white to-orange-50 py-4 px-4 flex items-start justify-center">
             <div className="w-full max-w-2xl">
@@ -139,13 +161,15 @@ const ContactForm = () => {
                         <div className="flex justify-center">
                             <ReCAPTCHA
                                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                                onChange={(token) => setCaptchaToken(token)}
+                                onChange={handleCaptchaSubmission}
+                                onExpired={handleExpired}
+                                ref={recaptchaRef}
                             />
                         </div>
 
                         <motion.button
                             type="submit"
-                            disabled={loading || !captchaToken}
+                            disabled={loading || !isVerified}
                             className="w-full bg-orange-500 text-white px-6 py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-orange-600 transition disabled:opacity-50"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
