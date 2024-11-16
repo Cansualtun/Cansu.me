@@ -160,7 +160,7 @@ const ContactForm = () => {
 
                         <div className="flex justify-center">
                             <ReCAPTCHA
-                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                                 onChange={handleCaptchaSubmission}
                                 onExpired={handleExpired}
                                 ref={recaptchaRef}
