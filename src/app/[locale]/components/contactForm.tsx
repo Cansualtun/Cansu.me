@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { Send, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
     const t = useTranslations('contact');
@@ -15,11 +16,19 @@ const ContactForm = () => {
         message: ''
     });
     const [loading, setLoading] = useState(false);
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!captchaToken) {
+            toast.error('Lütfen robot olmadığınızı doğrulayın');
+            return;
+        }
+
         setLoading(true);
         const loadingToast = toast.loading(t('toast.loading'));
+
         try {
             await emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -29,14 +38,23 @@ const ContactForm = () => {
                     from_email: formData.email,
                     subject: formData.subject,
                     message: formData.message,
+                    'g-recaptcha-response': captchaToken
                 },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
             );
+
             toast.success(t('toast.success.title'), {
                 description: t('toast.success.description'),
             });
 
             setFormData({ name: '', email: '', subject: '', message: '' });
+            setCaptchaToken(null);
+            if (window.grecaptcha) {
+                window.grecaptcha.reset();
+            }
+
+        } catch (error) {
+            toast.error('Bir hata oluştu');
         } finally {
             setLoading(false);
             toast.dismiss(loadingToast);
@@ -51,7 +69,9 @@ const ContactForm = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-6"
                 >
-                    <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-3">{t('title')}</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-3">
+                        {t('title')}
+                    </h1>
                     <p className="text-gray-600 text-sm md:text-base">{t('subtitle')}</p>
                 </motion.div>
 
@@ -121,9 +141,16 @@ const ContactForm = () => {
                             />
                         </div>
 
+                        <div className="flex justify-center">
+                            <ReCAPTCHA
+                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                                onChange={(token) => setCaptchaToken(token)}
+                            />
+                        </div>
+
                         <motion.button
                             type="submit"
-                            disabled={loading}
+                            disabled={loading || !captchaToken}
                             className="w-full bg-orange-500 text-white px-6 py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-orange-600 transition disabled:opacity-50"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
