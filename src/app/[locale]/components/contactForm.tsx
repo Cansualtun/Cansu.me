@@ -53,8 +53,6 @@ const ContactForm = () => {
                 window.grecaptcha.reset();
             }
 
-        } catch (error) {
-            toast.error('Bir hata oluştu');
         } finally {
             setLoading(false);
             toast.dismiss(loadingToast);
