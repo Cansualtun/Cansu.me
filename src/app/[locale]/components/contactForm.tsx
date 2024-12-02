@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from 'react';
+import { useState,useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Send, Loader2 } from 'lucide-react';
