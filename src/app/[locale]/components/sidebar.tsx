@@ -1,11 +1,11 @@
 "use client"
-import React from 'react';
 import Link from 'next/link';
 import { usePathname, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Home, User, Briefcase, Mail, Languages } from 'lucide-react';
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { useTranslations } from 'next-intl';
+import { FolderKanban } from 'lucide-react';
 
 interface MenuItem {
     title: string;
@@ -16,7 +16,9 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
     { title: 'sidebar.about', path: '/', icon: <User size={20} /> },
     { title: 'sidebar.experience', path: '/experience', icon: <Briefcase size={20} /> },
+    { title: 'sidebar.projects', path: '/projects', icon: <FolderKanban size={20} /> },
     { title: 'sidebar.contact', path: '/contact', icon: <Mail size={20} /> },
+   
 ];
 
 const Sidebar: React.FC = () => {

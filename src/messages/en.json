@@ -66,9 +66,24 @@
       }
     }
   },
+  "projects": {
+    "my_project": "My Projects",
+    "project_description": "Some projects and works I have developed",
+    "show_less": "Show Less",
+    "see_more": "See More",
+    "budget_tracker": {
+      "name": "Budget Tracker",
+      "description": "A comprehensive financial management application where users can track their income and expenses by categories, view visualized charts and detailed reports. Built with React and Next.js, this modern web app provides a user-friendly interface for effortless financial control."
+    },
+    "draggable_store": {
+      "name": "Draggable Store",
+      "description": "A customizable interface design tool featuring drag and drop functionality. Users can create, save, and modify their designs using an intuitive drag-and-drop system. Developed with React and TypeScript, this modern web application offers a seamless user experience for interface design."
+    }
+  },
   "sidebar": {
     "about": "About",
     "contact": "Contact",
+    "projects": "Projects",
     "experience": "Experience",
     "status": {
       "title": "Available for work",

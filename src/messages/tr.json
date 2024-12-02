@@ -66,9 +66,24 @@
       }
     }
   },
+  "projects": {
+    "my_project": "Projelerim",
+    "project_description": "Geliştirdiğim bazı projeler ve çalışmalar",
+    "show_less": "Daha az göster",
+    "see_more": "Daha fazla göster",
+    "budget_tracker": {
+      "name": "Bütçe Takipçisi",
+      "description": "Gelir ve giderlerinizi kategorize ederek takip edebileceğiniz, görselleştirilmiş grafikler ve raporlar sunan modern bir bütçe yönetim uygulaması. React ve Next.js ile geliştirilmiş kullanıcı dostu arayüzü ile finansal kontrolü kolaylaştırır."
+    },
+    "draggable_store": {
+      "name": "Sürükle & Bırak Mağazası",
+      "description": "Özelleştirilebilir drag and drop arayüz tasarım aracı. Kullanıcılar kendi tasarımlarını sürükle-bırak yöntemiyle oluşturabilir, düzenleyebilir ve kaydedebilir. React ve TypeScript ile geliştirilmiş, modern ve sezgisel kullanıcı deneyimi sunan web uygulaması."
+    }
+  },
   "sidebar": {
     "about": "Hakkımda",
     "contact": "İletişim",
+    "projects": "Projeler",
     "experience": "Deneyimlerim",
     "status": {
       "title": "İş Aramaya Açık",
