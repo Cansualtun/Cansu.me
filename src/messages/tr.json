@@ -12,6 +12,11 @@
   "experience": {
     "title": "İş Deneyimlerim",
     "companies": {
+      "profen": {
+        "title": "Uzman Yazılım Mühendisi",
+        "subtitle": "Full Time",
+        "description": "Savunma sanayi ve telekomünikasyon alanında faaliyet gösteren Profen’de, frontend ağırlıklı olmak üzere kullanıcı arayüzleri geliştiriyor ve gerçek zamanlı veri işleyen sistemlerde görev alıyorum. React ve TypeScript gibi modern teknolojilerle güvenli, performanslı ve kullanıcı dostu uygulamalar geliştiriyorum. Yazılım yaşam döngüsünün tüm aşamalarında aktif rol alarak, yüksek güvenlik standartlarına uygun çözümler üretiyorum."
+      },
       "hexaworks": {
         "title": "Yazılım Geliştirici",
         "subtitle": "Tam Zamanlı",

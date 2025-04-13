@@ -18,7 +18,7 @@ const menuItems: MenuItem[] = [
     { title: 'sidebar.experience', path: '/experience', icon: <Briefcase size={20} /> },
     { title: 'sidebar.projects', path: '/projects', icon: <FolderKanban size={20} /> },
     { title: 'sidebar.contact', path: '/contact', icon: <Mail size={20} /> },
-   
+
 ];
 
 const Sidebar: React.FC = () => {
@@ -76,14 +76,14 @@ const Sidebar: React.FC = () => {
             </nav>
             <div className="absolute bottom-8 max-[760px]:hidden min-[760px]:left-6 min-[760px]:right-6">
                 <LanguageSwitcher currentLocale={currentLocale} onLanguageChange={handleLanguageChange} />
-                <div className="mt-4 p-4 rounded-xl bg-orange-50">
+                {/* <div className="mt-4 p-4 rounded-xl bg-orange-50">
                     <p className="text-sm text-orange-600 font-medium">
                         Available for work
                     </p>
                     <p className="text-xs text-gray-600 mt-1">
                         Looking for new opportunities
                     </p>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     );

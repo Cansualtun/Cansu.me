@@ -8,6 +8,23 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    key: "profen",
+    period: "2025 - ",
+    company: "Profen",
+    description: "profen.description",
+    technologies: [
+      "Typescript",
+      "Javascript",
+      "HTML",
+      "CSS",
+      "TailwindCss",
+      "ReactJs",
+      "NextJs",
+      "Zustand",
+      "Ant Design",
+    ],
+  },
+  {
     key: "hexaworks",
     period: "2024",
     company: "Hexaworks",

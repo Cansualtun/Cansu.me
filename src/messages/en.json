@@ -12,6 +12,11 @@
   "experience": {
     "title": "Work Experience",
     "companies": {
+      "profen": {
+        "title": "Software Engineer",
+        "subtitle": "Full Time",
+        "description": "At Profen, a company operating in the defense and telecommunications sectors, I develop primarily frontend-focused user interfaces and work on systems that process real-time data. Using modern technologies such as React and TypeScript, I build secure, high-performance, and user-friendly applications. I take an active role in all stages of the software development lifecycle, delivering solutions aligned with high security standards."
+      },
       "hexaworks": {
         "title": "Software Developer",
         "subtitle": "Full Time",
